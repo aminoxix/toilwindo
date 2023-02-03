@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+
+  <body class="bg-black text-white flex items-center justify-center font-mono px-10">
+    <div class="flex-col">
+      <h1 class="text-2xl font-bold text-center p-10">Todo List</h1>
+      <div class="flex items-center justify-center gap-4">
+        <div class="flex items-center justify-center gap-4">
+          <input
+            class="text-black rounded-md h-10 w-max text-center"
+            type="text"
+            name="message"
+            placeholder="Enter Your Todo"
+            onclick="deleteTodoItem(event)"
+          />
+          <button
+            class="rounded-md bg-white text-black h-10 w-32 bg-green-500 font-semibold"
+            onclick="addTodoItem(event)"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-4">
+        <button
+          class="rounded-full text-black h-7 w-40 bg-sky-500 mt-10"
+          onclick="addCategory(event)"
+        >
+          + Add
+        </button>
+        <button
+          class="rounded-full text-black h-7 w-40 bg-sky-500 mt-10"
+          id="delete-all"
+          onclick="deleteAll()"
+        >
+          Delete All
+        </button>
+      </div>
+      <div class="mt-10">
+        <div
+          class="flex gap-8 flex-wrap justify-center pb-16"
+          id="categoryList"
+        ></div>
+        <ul
+          class="order-list flex flex-wrap items-center justify-center gap-16"
+        ></ul>
+      </div>
+      <div class="text-center p-16">
+        Todo App by <a class="text-sky-500" href="https://aminoxix.me">
+          @aminos
+        </a> 
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
